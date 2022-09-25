@@ -18,7 +18,11 @@ const AllGuns = ({ countIncrease }) => {
       </div>
       <div className="w-[90%] mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-3">
         {guns.map((gun) => (
-          <SingleGun guns={gun} countIncrease={countIncrease}></SingleGun>
+          <SingleGun
+            guns={gun}
+            key={gun.id}
+            countIncrease={countIncrease}
+          ></SingleGun>
         ))}
       </div>
     </div>
